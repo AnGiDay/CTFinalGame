@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Header Files\FrameWork">
+      <UniqueIdentifier>{6033e2e4-cf25-4d00-9177-96df506acff8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\FrameWork\Scene">
+      <UniqueIdentifier>{6da4c0db-f1e1-45ef-ba48-9a9fe4339b74}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object">
+      <UniqueIdentifier>{91b12ca2-73fc-445e-b920-c5935c3532c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CTFinalGame.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ContraGame.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FrameWork\Event.cpp">
+      <Filter>Header Files\FrameWork</Filter>
+    </ClCompile>
+    <ClCompile Include="FrameWork\InputController.cpp">
+      <Filter>Header Files\FrameWork</Filter>
+    </ClCompile>
+    <ClCompile Include="FrameWork\Sprite.cpp">
+      <Filter>Header Files\FrameWork</Filter>
+    </ClCompile>
+    <ClCompile Include="FrameWork\SpriteManager.cpp">
+      <Filter>Header Files\FrameWork</Filter>
+    </ClCompile>
+    <ClCompile Include="FrameWork\Texture.cpp">
+      <Filter>Header Files\FrameWork</Filter>
+    </ClCompile>
+    <ClCompile Include="FrameWork\Transformable.cpp">
+      <Filter>Header Files\FrameWork</Filter>
+    </ClCompile>
+    <ClCompile Include="FrameWork\Scene\Scene.cpp">
+      <Filter>Header Files\FrameWork\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="FrameWork\Scene\SceneManager.cpp">
+      <Filter>Header Files\FrameWork\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="FrameWork\DeviceManager.cpp">
+      <Filter>Header Files\FrameWork</Filter>
+    </ClCompile>
+    <ClCompile Include="FrameWork\GameTime.cpp">
+      <Filter>Header Files\FrameWork</Filter>
+    </ClCompile>
+    <ClCompile Include="FrameWork\Graphics.cpp">
+      <Filter>Header Files\FrameWork</Filter>
+    </ClCompile>
+    <ClCompile Include="FrameWork\TimeSpan.cpp">
+      <Filter>Header Files\FrameWork</Filter>
+    </ClCompile>
+    <ClCompile Include="FrameWork\Viewport.cpp">
+      <Filter>Header Files\FrameWork</Filter>
+    </ClCompile>
+    <ClCompile Include="FrameWork\Scene\PlayScene.cpp">
+      <Filter>Header Files\FrameWork\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="FrameWork\Animation.cpp">
+      <Filter>Header Files\FrameWork</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Object\Bill.cpp">
+      <Filter>Object</Filter>
+    </ClCompile>
+    <ClCompile Include="FrameWork\IComponent.cpp">
+      <Filter>Header Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="DeviceManager.h">
+      <Filter>Header Files\FrameWork</Filter>
+    </ClInclude>
+    <ClInclude Include="GameTime.h">
+      <Filter>Header Files\FrameWork</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphics.h">
+      <Filter>Header Files\FrameWork</Filter>
+    </ClInclude>
+    <ClInclude Include="TimeSpan.h">
+      <Filter>Header Files\FrameWork</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FrameWork\Sprite.h">
+      <Filter>Header Files\FrameWork</Filter>
+    </ClInclude>
+    <ClInclude Include="FrameWork\SpriteManager.h">
+      <Filter>Header Files\FrameWork</Filter>
+    </ClInclude>
+    <ClInclude Include="FrameWork\Event.h">
+      <Filter>Header Files\FrameWork</Filter>
+    </ClInclude>
+    <ClInclude Include="FrameWork\Transformable.h">
+      <Filter>Header Files\FrameWork</Filter>
+    </ClInclude>
+    <ClInclude Include="FrameWork\Texture.h">
+      <Filter>Header Files\FrameWork</Filter>
+    </ClInclude>
+    <ClInclude Include="FrameWork\Viewport.h">
+      <Filter>Header Files\FrameWork</Filter>
+    </ClInclude>
+    <ClInclude Include="ContraGame.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FrameWork\Scene\SceneManager.h">
+      <Filter>Header Files\FrameWork\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="FrameWork\InputController.h">
+      <Filter>Header Files\FrameWork</Filter>
+    </ClInclude>
+    <ClInclude Include="FrameWork\Scene\Scene.h">
+      <Filter>Header Files\FrameWork\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="FrameWork\Scene\PlayScene.h">
+      <Filter>Header Files\FrameWork\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="FrameWork\Animation.h">
+      <Filter>Header Files\FrameWork</Filter>
+    </ClInclude>
+    <ClInclude Include="IComponent.h">
+      <Filter>Header Files\FrameWork</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Object\Bill.h">
+      <Filter>Object</Filter>
+    </ClInclude>
+    <ClInclude Include="FrameWork\define.h">
+      <Filter>Header Files\FrameWork</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
