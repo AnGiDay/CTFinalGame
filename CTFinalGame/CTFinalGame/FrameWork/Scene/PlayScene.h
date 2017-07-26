@@ -8,6 +8,7 @@
 #include "../../FrameWork/Animation.h"
 #include"../../Object/Bill.h"
 #include "../../BaseObject.h"
+#include "../../Soldier.h"
 #include "../IComponent.h"
 #include "Scene.h"
 

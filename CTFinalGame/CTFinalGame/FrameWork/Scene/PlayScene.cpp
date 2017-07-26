@@ -24,6 +24,9 @@ bool PlayScene::init()
 	this->_bill = bill;
 	_listControlObject.push_back(bill);
 	_listobject.push_back(bill);
+	auto _soldier = new Soldier(eStatus::RUNNING,GVector2(0,200),1);
+	_soldier->init();	
+	_listobject.push_back(_soldier);
 	return true;
 }
 void PlayScene::updateInput(float dt)
@@ -136,7 +139,7 @@ void PlayScene::draw(LPD3DXSPRITE spriteHandle)
 
 	for (BaseObject* object : _active_object)
 	{
-		object->draw(spriteHandle, _viewport);
+		object->draw(spriteHandle,_viewport);
 	}
 	
 }
