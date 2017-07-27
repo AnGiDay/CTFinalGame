@@ -27,6 +27,15 @@ bool PlayScene::init()
 	auto _soldier = new Soldier(eStatus::RUNNING,GVector2(0,200),1);
 	_soldier->init();	
 	_listobject.push_back(_soldier);
+
+	auto bridge = new Bridge(GVector2(100, 100));
+	bridge->init();
+	bridge->setStatus(eStatus::BURST);
+	_listobject.push_back(bridge);
+
+	auto wallTurret = new WallTurret(eStatus::NORMAL, GVector2(250, 400));
+	wallTurret->init();
+	_listobject.push_back(wallTurret);
 	return true;
 }
 void PlayScene::updateInput(float dt)
@@ -157,7 +166,7 @@ void PlayScene::release()
 BaseObject* PlayScene::getObject(eID id)
 {
 	if (id == eID::BILL)
-	//[	return getBill();
+		return getBill();
 	eID objectID;
 	if (_active_object.size() == 0)
 	{
@@ -194,4 +203,9 @@ void PlayScene::updateViewport(BaseObject* objTracker)
 	}
 
 	_viewport->setPositionWorld(new_position);
+}
+
+Bill* PlayScene::getBill()
+{
+	return (Bill*)this->_bill;
 }

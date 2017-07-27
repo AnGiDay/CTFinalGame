@@ -1,0 +1,12 @@
+frame_name	left	top	right	bottom
+run_06		0	0	16	32
+run_05		18	0	34	32
+run_04		36	0	52	32
+run_03		54	0	70	32
+run_02		72	0	88	32
+run_01		90	0	106	32
+jump_01		108	0	124	32
+shoot_01	126	0	150	32
+shoot_02	152	0	176	32
+lay_down_01	178	0	210	32
+die_01		212	0	227	32

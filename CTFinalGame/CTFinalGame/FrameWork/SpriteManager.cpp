@@ -90,9 +90,9 @@ void SpriteManager::loadResource(LPD3DXSPRITE spriteHandle)
 	//this->loadSpriteInfo(eID::REDCANNON, "Resources//Images//cannon_animation.txt");
 
 
-	//sp = new Sprite(spriteHandle, L"Resources//Images//wall_turret_all.png", 42, 9);
-	//this->_listSprite[eID::WALL_TURRET] = sp;
-	//this->loadSpriteInfo(eID::WALL_TURRET, "Resources//Images//Wall_turret_animation.txt");
+	sp = new Sprite(spriteHandle, L"Resource//Images//wall_turret_all.png", 42, 9);
+	this->_listSprite[eID::WALL_TURRET] = sp;
+	this->loadSpriteInfo(eID::WALL_TURRET, "Resource//Images//Wall_turret_animation.txt");
 
 	//
 
@@ -104,14 +104,14 @@ void SpriteManager::loadResource(LPD3DXSPRITE spriteHandle)
 	//this->_listSprite[eID::FALCON] = sp;
 	//this->loadSpriteInfo(eID::FALCON, "Resources//Images//falcon_animation.txt");
 
-	//sp = new Sprite(spriteHandle, L"Resources//Images//explosion.png");
-	//this->_listSprite[eID::EXPLOSION] = sp;
-	//this->loadSpriteInfo(eID::EXPLOSION, "Resources//Images//explosion_animation.txt");
+	sp = new Sprite(spriteHandle, L"Resource//Images//explosion.png");
+	this->_listSprite[eID::EXPLOSION] = sp;
+	this->loadSpriteInfo(eID::EXPLOSION, "Resource//Images//explosion_animation.txt");
 
 
-	//Sprite* bill = new Sprite(spriteHandle, L"Resources//Images//bill_animation.png");
-	//this->_listSprite[eID::BILL] = bill;
-	//this->loadSpriteInfo(eID::BILL, "Resources//Images//bill_animation.txt");
+	/*Sprite* bill = new Sprite(spriteHandle, L"Resource//Images//bill_animation.png");
+	this->_listSprite[eID::BILL] = bill;
+	this->loadSpriteInfo(eID::BILL, "Resource//Images//bill_animation.txt");*/
 
 	//sp = new Sprite(spriteHandle, L"Resources//Images//rifleman.png");
 	//this->_listSprite[eID::RIFLEMAN] = sp;
@@ -121,8 +121,8 @@ void SpriteManager::loadResource(LPD3DXSPRITE spriteHandle)
 	//this->_listSprite[eID::BOSS_STAGE1] = sp;
 	//this->loadSpriteInfo(eID::BOSS_STAGE1, "Resources//Images//boss_stage1_animation.txt");
 
-	//sp = new Sprite(spriteHandle, L"Resources//Images//bridge.png", 6, 3);
-	//this->_listSprite[eID::BRIDGE] = sp;
+	sp = new Sprite(spriteHandle, L"Resource//Images//bridge.png", 6, 3);
+	this->_listSprite[eID::BRIDGE] = sp;
 
 	//auto bl = new Sprite(spriteHandle, L"Resources//Images//Bullets.png");
 	//this->_listSprite[eID::BULLET] = bl;

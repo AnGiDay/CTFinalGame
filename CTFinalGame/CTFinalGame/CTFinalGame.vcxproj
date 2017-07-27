@@ -82,8 +82,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="BaseObject.cpp" />
+    <ClCompile Include="Bridge.cpp" />
     <ClCompile Include="ContraGame.cpp" />
     <ClCompile Include="CTFinalGame.cpp" />
+    <ClCompile Include="Explosion.cpp" />
     <ClCompile Include="FrameWork\Animation.cpp" />
     <ClCompile Include="FrameWork\DeviceManager.cpp" />
     <ClCompile Include="FrameWork\Event.cpp" />
@@ -101,14 +103,19 @@
     <ClCompile Include="FrameWork\Transformable.cpp" />
     <ClCompile Include="FrameWork\Viewport.cpp" />
     <ClCompile Include="Game.cpp" />
+    <ClCompile Include="Land.cpp" />
     <ClCompile Include="Object\BaseEnemy.cpp" />
     <ClCompile Include="Object\Bill.cpp" />
     <ClCompile Include="Soldier.cpp" />
+    <ClCompile Include="StopWatch.cpp" />
+    <ClCompile Include="WallTurret.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BaseObject.h" />
+    <ClInclude Include="Bridge.h" />
     <ClInclude Include="ContraGame.h" />
     <ClInclude Include="DeviceManager.h" />
+    <ClInclude Include="Explosion.h" />
     <ClInclude Include="FrameWork\Animation.h" />
     <ClInclude Include="FrameWork\define.h" />
     <ClInclude Include="FrameWork\Event.h" />
@@ -125,10 +132,13 @@
     <ClInclude Include="GameTime.h" />
     <ClInclude Include="Graphics.h" />
     <ClInclude Include="IComponent.h" />
+    <ClInclude Include="Land.h" />
     <ClInclude Include="Object\BaseEnemy.h" />
     <ClInclude Include="Object\Bill.h" />
     <ClInclude Include="Soldier.h" />
+    <ClInclude Include="StopWatch.h" />
     <ClInclude Include="TimeSpan.h" />
+    <ClInclude Include="WallTurret.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

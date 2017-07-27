@@ -96,6 +96,21 @@
     <ClCompile Include="Object\BaseEnemy.cpp">
       <Filter>Object\Enemies</Filter>
     </ClCompile>
+    <ClCompile Include="Explosion.cpp">
+      <Filter>Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Land.cpp">
+      <Filter>Object</Filter>
+    </ClCompile>
+    <ClCompile Include="StopWatch.cpp">
+      <Filter>Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Bridge.cpp">
+      <Filter>Object</Filter>
+    </ClCompile>
+    <ClCompile Include="WallTurret.cpp">
+      <Filter>Object\Enemies</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DeviceManager.h">
@@ -165,6 +180,21 @@
       <Filter>Object\Enemies</Filter>
     </ClInclude>
     <ClInclude Include="Object\BaseEnemy.h">
+      <Filter>Object\Enemies</Filter>
+    </ClInclude>
+    <ClInclude Include="Explosion.h">
+      <Filter>Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Land.h">
+      <Filter>Object</Filter>
+    </ClInclude>
+    <ClInclude Include="StopWatch.h">
+      <Filter>Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Bridge.h">
+      <Filter>Object</Filter>
+    </ClInclude>
+    <ClInclude Include="WallTurret.h">
       <Filter>Object\Enemies</Filter>
     </ClInclude>
   </ItemGroup>

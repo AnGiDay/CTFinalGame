@@ -81,7 +81,7 @@ void Bill::init()
 	_animations[eStatus::DYING]->addFrameRect(eID::BILL, "dead_01", "dead_02", "dead_03", "dead_04", NULL);
 
 	this->setOrigin(GVector2(0.5f, 0.0f));
-	this->setStatus(eStatus::SWIMING);
+	this->setStatus(eStatus::NORMAL);
 
 
 	_isHolding = false;

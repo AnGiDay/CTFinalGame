@@ -11,6 +11,8 @@
 #include "../../Soldier.h"
 #include "../IComponent.h"
 #include "Scene.h"
+#include "../../Bridge.h"
+#include "../../WallTurret.h"
 
 
 #define BOSS_VIEWPORT_ANCHOR		6112
@@ -41,7 +43,7 @@ public:
 	BaseObject* getObject(eID id);
 	
 	// Lấy đối tượng bill.
-	//Bill* getBill();
+	Bill* getBill();
 private:
 	//void destroyobject();				// kiển tra nếu object hết hạn sử dụng thì phá huỷ đối tượng
 	//Text* _text;
