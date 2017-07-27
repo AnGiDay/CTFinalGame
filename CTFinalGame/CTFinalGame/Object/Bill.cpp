@@ -1,4 +1,5 @@
 ﻿#include "Bill.h"
+#include "../FrameWork/Scene/PlayScene.h"
 Bill::Bill():BaseObject(eID::BILL)
 {
 

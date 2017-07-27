@@ -1,6 +1,5 @@
 c:\users\dinht\desktop\nmgame\ctfinalgame\ctfinalgame\ctfinalgame\debug\vc120.pdb
 c:\users\dinht\desktop\nmgame\ctfinalgame\ctfinalgame\ctfinalgame\debug\vc120.idb
-c:\users\dinht\desktop\nmgame\ctfinalgame\ctfinalgame\ctfinalgame\debug\event.obj
 c:\users\dinht\desktop\nmgame\ctfinalgame\ctfinalgame\ctfinalgame\debug\gametime.obj
 c:\users\dinht\desktop\nmgame\ctfinalgame\ctfinalgame\ctfinalgame\debug\graphics.obj
 c:\users\dinht\desktop\nmgame\ctfinalgame\ctfinalgame\ctfinalgame\debug\icomponent.obj
@@ -20,6 +19,7 @@ c:\users\dinht\desktop\nmgame\ctfinalgame\ctfinalgame\ctfinalgame\debug\baseenem
 c:\users\dinht\desktop\nmgame\ctfinalgame\ctfinalgame\ctfinalgame\debug\bill.obj
 c:\users\dinht\desktop\nmgame\ctfinalgame\ctfinalgame\ctfinalgame\debug\soldier.obj
 c:\users\dinht\desktop\nmgame\ctfinalgame\ctfinalgame\ctfinalgame\debug\stopwatch.obj
+c:\users\dinht\desktop\nmgame\ctfinalgame\ctfinalgame\ctfinalgame\debug\wallturret.obj
 c:\users\dinht\desktop\nmgame\ctfinalgame\ctfinalgame\ctfinalgame\debug\baseobject.obj
 c:\users\dinht\desktop\nmgame\ctfinalgame\ctfinalgame\ctfinalgame\debug\bridge.obj
 c:\users\dinht\desktop\nmgame\ctfinalgame\ctfinalgame\ctfinalgame\debug\contragame.obj
@@ -27,7 +27,7 @@ c:\users\dinht\desktop\nmgame\ctfinalgame\ctfinalgame\ctfinalgame\debug\ctfinalg
 c:\users\dinht\desktop\nmgame\ctfinalgame\ctfinalgame\ctfinalgame\debug\explosion.obj
 c:\users\dinht\desktop\nmgame\ctfinalgame\ctfinalgame\ctfinalgame\debug\animation.obj
 c:\users\dinht\desktop\nmgame\ctfinalgame\ctfinalgame\ctfinalgame\debug\devicemanager.obj
-c:\users\dinht\desktop\nmgame\ctfinalgame\ctfinalgame\ctfinalgame\debug\wallturret.obj
+c:\users\dinht\desktop\nmgame\ctfinalgame\ctfinalgame\ctfinalgame\debug\event.obj
 c:\users\dinht\desktop\nmgame\ctfinalgame\ctfinalgame\debug\ctfinalgame.ilk
 c:\users\dinht\desktop\nmgame\ctfinalgame\ctfinalgame\debug\ctfinalgame.exe
 c:\users\dinht\desktop\nmgame\ctfinalgame\ctfinalgame\debug\ctfinalgame.pdb

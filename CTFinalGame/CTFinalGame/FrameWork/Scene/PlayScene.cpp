@@ -20,7 +20,7 @@ bool PlayScene::init()
 
 	auto bill = new Bill();
 	bill->init();
-	bill->setPosition(300, 100);
+	bill->setPosition(0, 100);
 	this->_bill = bill;
 	_listControlObject.push_back(bill);
 	_listobject.push_back(bill);
@@ -30,7 +30,7 @@ bool PlayScene::init()
 
 	auto bridge = new Bridge(GVector2(100, 100));
 	bridge->init();
-	bridge->setStatus(eStatus::BURST);
+	//bridge->setStatus(eStatus::BURST);
 	_listobject.push_back(bridge);
 
 	auto wallTurret = new WallTurret(eStatus::NORMAL, GVector2(250, 400));

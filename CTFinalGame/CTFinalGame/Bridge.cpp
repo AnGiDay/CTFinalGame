@@ -51,7 +51,7 @@ void Bridge::update(float deltatime)
 	else
 	{
 		auto playscene = (PlayScene*)SceneManager::getInstance()->getCurrentScene();
-		//this->trackBill(playscene->getBill());
+		this->trackBill(playscene->getBill());
 	}
 	for (auto component : _listComponent)
 	{
@@ -139,49 +139,6 @@ void Bridge::draw(LPD3DXSPRITE spritehandle, Viewport* viewport)
 	//
 }
 
-void Bridge::draw(LPD3DXSPRITE spritehandle)
-{
-	if (this->getStatus() == eStatus::DESTROY)
-		return;
-	GVector2 posrender;
-	// Thuật toán vẽ giống cách vẽ từng pixel trên console.
-	for (int i = 0; i < 2; i++)
-	{
-		for (int j = 0; j < MAX_WAVE * 2; j++)
-		{
-			if (privateIndex[i][j] == -1)
-				continue;
-			posrender = this->_transform->getPosition();
-			posrender.x += j * this->getSprite()->getFrameWidth();
-			posrender.y -= i * this->getSprite()->getFrameHeight();
-			_sprite->setPosition(posrender);
-			_sprite->setIndex(privateIndex[i][j]);
-			_sprite->render(spritehandle);
-		}
-	}
-	if (this->getStatus() == eStatus::BURST)
-	{
-		//_explode->draw(spritehandle);
-	}
-
-	//RECT r;
-	//auto pos = viewport->getPositionInViewport(new GVector3(getPositionX(), getPositionY(), 0));
-	//r.top = max(pos.y, 1);
-	//r.left = max(pos.x, 1);
-	//r.bottom = min(pos.y + this->getBounding().top - this->getBounding().bottom, WINDOW_HEIGHT - 1);
-	//r.right = min(pos.x + this->getBounding().right - this->getBounding().left, WINDOW_WIDTH - 1);
-
-	//DeviceManager::getInstance()->getDevice()->ColorFill(_surface, NULL, D3DXCOLOR(1.0f, 0.0f, 1.0f, 1.0f));
-
-	//DeviceManager::getInstance()->getDevice()->StretchRect(
-	//	_surface,
-	//	NULL,
-	//	DeviceManager::getInstance()->getSurface(),
-	//	&r,
-	//	D3DTEXF_NONE
-	//	);
-	//
-}
 void Bridge::release()
 {
 	SAFE_DELETE(_stopwatch);
@@ -223,14 +180,14 @@ RECT Bridge::getBounding()
 	return rect;
 }
 
-//void Bridge::trackBill(Bill* bill)
-//{
-//	RECT billBound = bill->getBounding();
-//	RECT bridgeBound = this->getBounding();
-//
-//	if (billBound.right >= bridgeBound.left)
-//		this->setStatus(eStatus::BURST);
-//}
+void Bridge::trackBill(Bill* bill)
+{
+	RECT billBound = bill->getBounding();
+	RECT bridgeBound = this->getBounding();
+
+	if (billBound.right >= bridgeBound.left)
+		this->setStatus(eStatus::BURST);
+}
 
 void Bridge::setStatus(eStatus status)
 {

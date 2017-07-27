@@ -6,7 +6,7 @@
 #include "../FrameWork/Animation.h"
 #include "../FrameWork/InputController.h"
 #include "../FrameWork/Scene/SceneManager.h"
-#include "../FrameWork/Scene/PlayScene.h"
+
 #include "../BaseObject.h"
 #include "../FrameWork/IComponent.h"
 #define BILL_MOVE_SPEED 125
@@ -18,6 +18,7 @@
 #define PROTECT_TIME 3000
 
 [event_receiver(native)]
+class PlayScene;
 class Bill : public BaseObject, public IControlable
 {
 

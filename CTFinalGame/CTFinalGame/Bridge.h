@@ -56,7 +56,7 @@ public:
 	void release();
 
 	// Theo dỗi bill. Nếu hắn đến gần cầu thì cho nổ cầu.
-	//void trackBill(Bill* bill);
+	void trackBill(Bill* bill);
 	// Xử lý nổ cầu.
 	// deltatime: thời gian update vòng lặp game (milisecond)
 	void burst(float deltatime);
