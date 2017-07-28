@@ -1,11 +1,11 @@
 ﻿#ifndef _RUNNINGSOLDIER_H
 #define _RUNNINGSOLDIER_H
 
-#include "FrameWork\Animation.h"
+#include "FrameWork/Animation.h"
 #include "IComponent.h"
 #include "FrameWork\Scene\PlayScene.h"
 #include "Object\BaseEnemy.h"
-#include "FrameWork\StopWatch.h"
+
 
 using namespace std;
 
@@ -44,12 +44,10 @@ public:
 private:
 	map<string, IComponent*> _listComponent;
 	map<int, Animation*> _animations;
-	StopWatch *_stopwatch;
-	StopWatch *_shoot;
-	StopWatch *_loopwatch;
-	StopWatch *_checkShoot;
 	BaseObject *_explosion;
-	BaseObject* prevObject;	Sprite *_divingSprite;
+	BaseObject* prevObject;
+	//list<Bullet*> _listBullets;
+	Sprite *_divingSprite;
 	bool _canShoot;
 
 	void shoot();

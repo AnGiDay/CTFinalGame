@@ -1,6 +1,12 @@
 ﻿#include "Soldier.h"
+
 Soldier::Soldier(eStatus status, GVector2 pos, int direction) : BaseEnemy(eID::SOLDIER) {
 	_sprite = SpriteManager::getInstance()->getSprite(eID::SOLDIER);
+	_sprite->setFrameRect(0, 0, 32.0f, 16.0f);
+	_divingSprite = SpriteManager::getInstance()->getSprite(eID::BILL);
+	_divingSprite->setFrameRect(0, 0, 17.0f, 15.0f);
+	_divingSprite->setScale(SCALE_FACTOR);
+	_divingSprite->setOrigin(GVector2(0.5f, 0.0f));
 	GVector2 v(direction * SOLDIER_SPEED, 0);
 	GVector2 a(0, 0);
 	this->_listComponent.insert(pair<string, IComponent*>("Movement", new Movement(a, v, this->_sprite)));
@@ -13,6 +19,11 @@ Soldier::Soldier(eStatus status, GVector2 pos, int direction) : BaseEnemy(eID::S
 
 Soldier::Soldier(eStatus status, float x, float y, int direction) : BaseEnemy(eID::SOLDIER) {
 	_sprite = SpriteManager::getInstance()->getSprite(eID::SOLDIER);
+	_sprite->setFrameRect(0, 0, 32.0f, 16.0f);
+	_divingSprite = SpriteManager::getInstance()->getSprite(eID::BILL);
+	_divingSprite->setFrameRect(0, 0, 17.0f, 15.0f);
+	_divingSprite->setScale(SCALE_FACTOR);
+	_divingSprite->setOrigin(GVector2(0.5f, 0.0f));
 	GVector2 pos(x, y);
 	GVector2 v(direction * SOLDIER_SPEED, 0);
 	GVector2 a(0, 0);
@@ -26,6 +37,11 @@ Soldier::Soldier(eStatus status, float x, float y, int direction) : BaseEnemy(eI
 
 Soldier::Soldier(eStatus status, GVector2 pos, int direction, bool shoot) : BaseEnemy(eID::SOLDIER) {
 	_sprite = SpriteManager::getInstance()->getSprite(eID::SOLDIER);
+	_sprite->setFrameRect(0, 0, 32.0f, 16.0f);
+	_divingSprite = SpriteManager::getInstance()->getSprite(eID::BILL);
+	_divingSprite->setFrameRect(0, 0, 17.0f, 15.0f);
+	_divingSprite->setScale(SCALE_FACTOR);
+	_divingSprite->setOrigin(GVector2(0.5f, 0.0f));
 	GVector2 v(direction * SOLDIER_SPEED, 0);
 	GVector2 a(0, 0);
 	this->_listComponent.insert(pair<string, IComponent*>("Movement", new Movement(a, v, this->_sprite)));
@@ -38,6 +54,11 @@ Soldier::Soldier(eStatus status, GVector2 pos, int direction, bool shoot) : Base
 
 Soldier::Soldier(eStatus status, float x, float y, int direction, bool shoot) : BaseEnemy(eID::SOLDIER) {
 	_sprite = SpriteManager::getInstance()->getSprite(eID::SOLDIER);
+	_sprite->setFrameRect(0, 0, 32.0f, 16.0f);
+	_divingSprite = SpriteManager::getInstance()->getSprite(eID::BILL);
+	_divingSprite->setFrameRect(0, 0, 17.0f, 15.0f);
+	_divingSprite->setScale(SCALE_FACTOR);
+	_divingSprite->setOrigin(GVector2(0.5f, 0.0f));
 	GVector2 pos(x, y);
 	GVector2 v(direction * SOLDIER_SPEED, 0);
 	GVector2 a(0, 0);
@@ -53,11 +74,16 @@ Soldier::~Soldier() {}
 
 void Soldier::init()
 {
+	srand(599999);
 	this->setHitpoint(SOLDIER_HITPOINT);
+	this->setScore(SOLDIER_SCORE);
 	this->_listComponent.insert(pair<string, IComponent*>("Gravity", new Gravity(GVector2(0, 0), (Movement*)(this->getComponent("Movement")))));
 	_animations[RUNNING] = new Animation(_sprite, 0.15f);
 	_animations[RUNNING]->addFrameRect(eID::SOLDIER, "run_01", "run_02", "run_03", "run_04", "run_05", "run_06", NULL);
-		
+
+	_animations[SHOOTING] = new Animation(_sprite, 0.15f);
+	_animations[SHOOTING]->addFrameRect(eID::SOLDIER, "shoot_01", "shoot_02", NULL);
+
 	_animations[JUMPING] = new Animation(_sprite, 0.15f);
 	_animations[JUMPING]->addFrameRect(eID::SOLDIER, "jump_01", NULL);
 
@@ -72,10 +98,6 @@ void Soldier::init()
 
 	_animations[DIVING] = new Animation(_divingSprite, 0.15f, false);
 	_animations[DIVING]->addFrameRect(eID::BILL, "swim_begin", "diving", "swim_begin", NULL);
-	_stopwatch = new StopWatch();
-	_loopwatch = new StopWatch();
-	_shoot = new StopWatch();
-	_checkShoot = new StopWatch();
 }
 
 void Soldier::draw(LPD3DXSPRITE spritehandle, Viewport* viewport)
@@ -109,18 +131,12 @@ IComponent* Soldier::getComponent(string componentName)
 
 void Soldier::update(float deltatime)
 {
-	auto bill = ((PlayScene*)SceneManager::getInstance()->getCurrentScene())->getBill();
-	float dx = (this->getPosition().x) - (bill->getPosition().x);
-	if (dx>-20 && dx <20){
-		setHitpoint(0);
-	}
-	else
 	if (_explosion != NULL)
 		_explosion->update(deltatime);
 
 	if (this->getStatus() == eStatus::BURST)
 	{
-		if (_explosion == nullptr)
+		/*if (_explosion == nullptr)
 		{
 			auto pos = this->getPosition();
 			_explosion = new Explosion(1);
@@ -132,7 +148,7 @@ void Soldier::update(float deltatime)
 		{
 			this->setStatus(eStatus::DESTROY);
 		}
-		return;
+		return;*/
 	}
 
 	if (this->getStatus() == eStatus::DIVING)
@@ -157,29 +173,55 @@ void Soldier::update(float deltatime)
 
 	if (this->getStatus() == eStatus::DYING) {
 
-		if (_stopwatch->isStopWatch(200))
+		/*if (_stopwatch->isStopWatch(200))
 		{
 			movement->setVelocity(GVector2(0, 0));
 			this->setStatus(eStatus::BURST);
 			return;
-		}
+		}*/
 	}
 
 	if (this->getStatus() == eStatus::BURST)
 	{
 		if (_explosion == nullptr)
 		{
-			auto pos = this->getPosition();
+			/*auto pos = this->getPosition();
 			_explosion = new Explosion(1);
 			_explosion->init();
 			_explosion->setScale(SCALE_FACTOR);
-			_explosion->setPosition(pos);
+			_explosion->setPosition(pos);*/
 		}
 		else if (_explosion->getStatus() == eStatus::DESTROY)
 		{
 			this->setStatus(eStatus::DESTROY);
 		}
 	}
+	/*if (this->_shoot->isTimeLoop(3000.0f))
+	{
+		if (this->_canShoot && this->getStatus() == RUNNING)
+		{
+			int chance = rand() % 2;
+			if (chance == 1)
+			{
+				this->setStatus(SHOOTING);
+				Movement *move = (Movement*)this->getComponent("Movement");
+				move->setVelocity(GVector2(0, 0));
+			}
+		}
+	}*/
+	if (this->getStatus() == SHOOTING)
+	{
+		/*if (_checkShoot->isStopWatch(1000.0f))
+		{
+			Movement *move = (Movement*)this->getComponent("Movement");
+			move->setVelocity(GVector2(-SOLDIER_SPEED * this->getScale().x / 2, 0));
+			this->setStatus(RUNNING);
+			_checkShoot->restart();
+		}*/
+	}
+	//if (_loopwatch->isTimeLoop(SOLDIER_SHOOTING_DELAY))
+	if (this->getStatus() == SHOOTING)
+		shoot();
 	for (auto it : _listComponent)
 	{
 		it.second->update(deltatime);
@@ -192,10 +234,10 @@ void Soldier::update(float deltatime)
 void Soldier::setPosition(GVector2 pos)
 {
 	_sprite->setPosition(pos);
+	_divingSprite->setPosition(pos);
 }
 void Soldier::changeDirection()
 {
-
 	_sprite->setScaleX(-this->getScale().x);
 	Movement *movement = (Movement*)this->getComponent("Movement");
 	movement->setVelocity(GVector2(-movement->getVelocity().x, 0));
@@ -234,4 +276,5 @@ void Soldier::shoot()
 		pos.x += this->getScale().x < 0 ? this->getSprite()->getFrameWidth() / 2 : -this->getSprite()->getFrameWidth() / 2;
 		pos.y -= this->getSprite()->getFrameHeight() / 4.5;
 	}
+	//BulletManager::insertBullet(new Bullet(pos, (eBulletType)(ENEMY_BULLET | NORMAL_BULLET), angle));
 }
