@@ -124,9 +124,9 @@ void SpriteManager::loadResource(LPD3DXSPRITE spriteHandle)
 	sp = new Sprite(spriteHandle, L"Resource//Images//bridge.png", 6, 3);
 	this->_listSprite[eID::BRIDGE] = sp;
 
-	//auto bl = new Sprite(spriteHandle, L"Resources//Images//Bullets.png");
-	//this->_listSprite[eID::BULLET] = bl;
-	//this->loadSpriteInfo(eID::BULLET, "Resources//Images//bullets_type.txt");
+	auto bl = new Sprite(spriteHandle, L"Resource//Bullets.png");
+	this->_listSprite[eID::BULLET] = bl;
+	this->loadSpriteInfo(eID::BULLET, "Resource//bullets_type.txt");
 
 	//sp = new Sprite(spriteHandle, L"Resources//Images//stage3_elements.png", 5, 5);
 	//this->_listSprite[eID::ROCKFLY] = sp;

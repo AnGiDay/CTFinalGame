@@ -13,7 +13,8 @@
 #include "Scene.h"
 #include "../../Bridge.h"
 #include "../../WallTurret.h"
-
+#include "../../Soldier.h"
+#include "../../Rifleman.h"
 
 #define BOSS_VIEWPORT_ANCHOR		6112
 
@@ -41,9 +42,8 @@ public:
 	// id: kiểu enum eID, định danh một đối tượng.
 	// return: đối tượng cần tìm.
 	BaseObject* getObject(eID id);
-	
-	// Lấy đối tượng bill.
-	Bill* getBill();
+	BaseObject* getBill();
+	BaseObject* _bulletmanager;
 private:
 	//void destroyobject();				// kiển tra nếu object hết hạn sử dụng thì phá huỷ đối tượng
 	//Text* _text;

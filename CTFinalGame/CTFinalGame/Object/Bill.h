@@ -18,7 +18,7 @@
 #define BILL_MOVE_SPEED 125
 #define BILL_JUMP_VEL 450
 #define GRAVITY 800
-#define SHOOT_SPEED 200.0f
+#define SHOOT_SPEED 300.0f
 #define MAX_BULLET 4
 #define REVIVE_TIME 2000
 #define PROTECT_TIME 3000

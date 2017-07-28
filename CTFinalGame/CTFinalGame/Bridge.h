@@ -30,16 +30,15 @@ _wave				int							Dùng để phục vụ cho thuật toán nổ cầu.
 #define __BRIDGE_H__
 
 #include "StopWatch.h"
-#include "FrameWork\Scene\PlayScene.h"
+
 #include "BaseObject.h"
 #include "Explosion.h"
 #include "Land.h"
-
+#include "FrameWork\Scene\PlayScene.h"
 
 // nếu sửa max_wave thì phải sửa _matrixIndex
 #define MAX_WAVE 4		// số lần nổ
 #define DELAYTIME 50.0f	// Thời gian khoảng cách giữa hai vụ nổ
-
 #define BRIDGE_POSITION GVector2(200.0f, 300.0f)	// test value
 
 class Bridge : public Land
@@ -56,7 +55,7 @@ public:
 	void release();
 
 	// Theo dỗi bill. Nếu hắn đến gần cầu thì cho nổ cầu.
-	void trackBill(Bill* bill);
+	void trackBill(BaseObject* bill);
 	// Xử lý nổ cầu.
 	// deltatime: thời gian update vòng lặp game (milisecond)
 	void burst(float deltatime);

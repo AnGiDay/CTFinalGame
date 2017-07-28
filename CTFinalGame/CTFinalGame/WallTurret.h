@@ -10,6 +10,7 @@
 #include "IComponent.h"
 #include "Explosion.h"
 #include "Object\BaseEnemy.h"
+#include "../CTFinalGame/BulletManager.h"
 
 #define WALL_TURRET_HITPOINT 8
 #define WALL_TURRET_SCORE 1000
@@ -57,7 +58,7 @@ private:
 	eWT_Status _wtstatus;
 	BaseObject* _explosion;
 
-	//list<Bullet*> _listBullet;
+	list<Bullet*> _listBullet;
 	StopWatch* _stopwatch;
 
 	void initExplosion();

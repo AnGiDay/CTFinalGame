@@ -1,5 +1,59 @@
-﻿Build started 27/07/2017 22:09:08.
+﻿Build started 28/07/2017 21:53:50.
+     1>Project "E:\HK Hè\GIT Game\CTFinalGame\CTFinalGame\CTFinalGame\CTFinalGame.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _CRT_SECURE_NO_WARNINGS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Bridge.cpp Bullet.cpp BulletManager.cpp CTFinalGame.cpp ContraGame.cpp FrameWork\Scene\PlayScene.cpp M_Bullet.cpp Object\Bill.cpp Rifleman.cpp Soldier.cpp WallTurret.cpp
+         Bridge.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+     1>e:\hk hè\git game\ctfinalgame\ctfinalgame\ctfinalgame\bridge.cpp(170): warning C4244: '=' : conversion from 'FLOAT' to 'LONG', possible loss of data
+     1>e:\hk hè\git game\ctfinalgame\ctfinalgame\ctfinalgame\bridge.cpp(171): warning C4244: '=' : conversion from 'FLOAT' to 'LONG', possible loss of data
+         Generating Code...
+         Skipping... (no relevant changes detected)
+         WallTurret.cpp
+         Soldier.cpp
+         Rifleman.cpp
+         Bill.cpp
+         M_Bullet.cpp
+         PlayScene.cpp
+         ContraGame.cpp
+         CTFinalGame.cpp
+         BulletManager.cpp
+         Bullet.cpp
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\HK Hè\GIT Game\CTFinalGame\CTFinalGame\Debug\CTFinalGame.exe" /INCREMENTAL /NOLOGO d3d9.lib d3dx9.lib dinput8.lib dxguid.lib dsound.lib dxerr.lib winmm.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:\HK Hè\GIT Game\CTFinalGame\CTFinalGame\Debug\CTFinalGame.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\HK Hè\GIT Game\CTFinalGame\CTFinalGame\Debug\CTFinalGame.lib" /MACHINE:X86 Debug\BaseObject.obj
+         Debug\Bridge.obj
+         Debug\Bullet.obj
+         Debug\BulletManager.obj
+         Debug\ContraGame.obj
+         Debug\CTFinalGame.obj
+         Debug\Explosion.obj
+         Debug\Animation.obj
+         Debug\DeviceManager.obj
+         Debug\Event.obj
+         Debug\GameTime.obj
+         Debug\Graphics.obj
+         Debug\IComponent.obj
+         Debug\InputController.obj
+         Debug\PlayScene.obj
+         Debug\Scene.obj
+         Debug\SceneManager.obj
+         Debug\Sprite.obj
+         Debug\SpriteManager.obj
+         Debug\Texture.obj
+         Debug\TimeSpan.obj
+         Debug\Transformable.obj
+         Debug\Viewport.obj
+         Debug\Game.obj
+         Debug\Land.obj
+         Debug\M_Bullet.obj
+         Debug\BaseEnemy.obj
+         Debug\Bill.obj
+         Debug\Rifleman.obj
+         Debug\Soldier.obj
+         Debug\StopWatch.obj
+         Debug\WallTurret.obj
+         CTFinalGame.vcxproj -> E:\HK Hè\GIT Game\CTFinalGame\CTFinalGame\Debug\CTFinalGame.exe
+     1>Done Building Project "E:\HK Hè\GIT Game\CTFinalGame\CTFinalGame\CTFinalGame\CTFinalGame.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:00.06
+Time Elapsed 00:00:02.33

@@ -1,5 +1,4 @@
-﻿
-#include "Bridge.h"
+﻿#include "Bridge.h"
 
 int Bridge::_matrixIndex[2][MAX_WAVE * 2] =
 {
@@ -180,8 +179,9 @@ RECT Bridge::getBounding()
 	return rect;
 }
 
-void Bridge::trackBill(Bill* bill)
+void Bridge::trackBill(BaseObject* bill)
 {
+
 	RECT billBound = bill->getBounding();
 	RECT bridgeBound = this->getBounding();
 

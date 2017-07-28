@@ -433,10 +433,10 @@ void WallTurret::shoot()
 	{
 		pos.y += this->getSprite()->getFrameHeight();
 	}
-	//BulletManager::insertBullet(new Bullet(pos, (eBulletType)(ENEMY_BULLET | NORMAL_BULLET), angle));
+	BulletManager::insertBullet(new Bullet(pos, (eBulletType)(ENEMY_BULLET | NORMAL_BULLET), angle));
 	//Bỏ sẵn
-	/*_listBullet.push_back(new Bullet( pos, (eBulletType)(ENEMY_BULLET|NORMAL_BULLET), angle));
-	_listBullet.back()->init();*/
+	//_listBullet.push_back(new Bullet( pos, (eBulletType)(ENEMY_BULLET|NORMAL_BULLET), angle));
+	//_listBullet.back()->init();
 }
 void WallTurret::calculateBillangle()
 {

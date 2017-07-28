@@ -83,6 +83,8 @@
   <ItemGroup>
     <ClCompile Include="BaseObject.cpp" />
     <ClCompile Include="Bridge.cpp" />
+    <ClCompile Include="Bullet.cpp" />
+    <ClCompile Include="BulletManager.cpp" />
     <ClCompile Include="ContraGame.cpp" />
     <ClCompile Include="CTFinalGame.cpp" />
     <ClCompile Include="Explosion.cpp" />
@@ -104,8 +106,10 @@
     <ClCompile Include="FrameWork\Viewport.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="Land.cpp" />
+    <ClCompile Include="M_Bullet.cpp" />
     <ClCompile Include="Object\BaseEnemy.cpp" />
     <ClCompile Include="Object\Bill.cpp" />
+    <ClCompile Include="Rifleman.cpp" />
     <ClCompile Include="Soldier.cpp" />
     <ClCompile Include="StopWatch.cpp" />
     <ClCompile Include="WallTurret.cpp" />
@@ -113,6 +117,8 @@
   <ItemGroup>
     <ClInclude Include="BaseObject.h" />
     <ClInclude Include="Bridge.h" />
+    <ClInclude Include="Bullet.h" />
+    <ClInclude Include="BulletManager.h" />
     <ClInclude Include="ContraGame.h" />
     <ClInclude Include="DeviceManager.h" />
     <ClInclude Include="Explosion.h" />
@@ -133,8 +139,10 @@
     <ClInclude Include="Graphics.h" />
     <ClInclude Include="IComponent.h" />
     <ClInclude Include="Land.h" />
+    <ClInclude Include="M_Bullet.h" />
     <ClInclude Include="Object\BaseEnemy.h" />
     <ClInclude Include="Object\Bill.h" />
+    <ClInclude Include="Rifleman.h" />
     <ClInclude Include="Soldier.h" />
     <ClInclude Include="StopWatch.h" />
     <ClInclude Include="TimeSpan.h" />
