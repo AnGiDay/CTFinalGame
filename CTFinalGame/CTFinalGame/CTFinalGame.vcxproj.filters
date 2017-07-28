@@ -111,6 +111,18 @@
     <ClCompile Include="WallTurret.cpp">
       <Filter>Object\Enemies</Filter>
     </ClCompile>
+    <ClCompile Include="Bullet.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BulletManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="M_Bullet.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Rifleman.cpp">
+      <Filter>Object\Enemies</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DeviceManager.h">
@@ -195,6 +207,18 @@
       <Filter>Object</Filter>
     </ClInclude>
     <ClInclude Include="WallTurret.h">
+      <Filter>Object\Enemies</Filter>
+    </ClInclude>
+    <ClInclude Include="Bullet.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BulletManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="M_Bullet.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Rifleman.h">
       <Filter>Object\Enemies</Filter>
     </ClInclude>
   </ItemGroup>

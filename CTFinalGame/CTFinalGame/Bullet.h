@@ -8,7 +8,7 @@
 #include "BaseObject.h"
 #include "IComponent.h"
 //#include "../CollisionBody.h"
-#define NORMAL_BULLET_SPEED 400
+#define NORMAL_BULLET_SPEED 300
 
 #define TOP_SHOOT_ANGLE					0.0f
 #define RIGHT_SHOOT_ANGLE				90.0f

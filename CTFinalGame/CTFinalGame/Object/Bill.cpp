@@ -210,6 +210,9 @@ void Bill::onKeyPressed(KeyEventArg* key_event)
 	{
 	case DIK_X:
 	{
+				  if (this->isInStatus(eStatus::LAYING_DOWN)){
+					  break;
+				  }
 				  if (!this->isInStatus(eStatus::LAYING_DOWN) || this->isInStatus(eStatus::MOVING_LEFT) || this->isInStatus(eStatus::MOVING_RIGHT))
 				  {
 					  if (!this->isInStatus(eStatus::SWIMING))

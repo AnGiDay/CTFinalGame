@@ -146,19 +146,19 @@ void Rifleman::update(float deltatime)
 	{
 		changeShootingStance();
 		calculateShootingAngle();
-		///*if (bullets >= 3)
-		//{
-		//	bullets = 0;
-		//	delay = RIFLEMAN_BULLET_BURST_DELAY;
-		//	this->removeStatus(SHOOTING);
-		//}*/
-		///*if (_loopwatch->isTimeLoop(delay))
-		//{
-		//	this->addStatus(SHOOTING);
-		//	shoot();
-		//	bullets++;
-		//	delay = RIFLEMAN_SHOOTING_DELAY;
-		//}*/
+		if (bullets >= 3)
+		{
+			bullets = 0;
+			delay = RIFLEMAN_BULLET_BURST_DELAY;
+			this->removeStatus(SHOOTING);
+		}
+		if (_loopwatch->isTimeLoop(delay))
+		{
+			this->addStatus(SHOOTING);
+			shoot();
+			bullets++;
+			delay = RIFLEMAN_SHOOTING_DELAY;
+		}
 	}
 	else
 	{
@@ -195,13 +195,13 @@ void Rifleman::update(float deltatime)
 				animationTime = GameTime::getInstance()->getTotalGameTime();
 			}
 		}
-		/*if (_loopwatch->isTimeLoop(RIFLEMAN_BULLET_BURST_DELAY))
+		if (_loopwatch->isTimeLoop(RIFLEMAN_BULLET_BURST_DELAY))
 		{
 			if (this->isInStatus(SHOOTING))
 			{
 				shoot();
 			}
-		}*/
+		}
 	}
 
 
@@ -270,6 +270,7 @@ void Rifleman::shoot()
 		pos.x += this->getScale().x < 0 ? (framewidth >> 1) : -(framewidth >> 1);
 		pos.y += this->getSprite()->getFrameHeight() / 4.5f;
 	}
+	BulletManager::insertBullet(new Bullet(pos, (eBulletType)(ENEMY_BULLET | NORMAL_BULLET), angle));
 }
 
 void Rifleman::die() {
@@ -286,6 +287,7 @@ void Rifleman::calculatingShootingDirection()
 	float dx = (this->getPosition().x) - (bill->getPosition().x);
 	if (dx > 0){
 		this->setScaleX(SCALE_FACTOR);
+
 	}
 	else{
 		this->setScaleX(-SCALE_FACTOR);
