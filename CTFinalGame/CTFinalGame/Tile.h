@@ -1,0 +1,23 @@
+#pragma once
+#ifndef __TILE__
+#define __TILE__
+
+#include "FrameWork\Sprite.h"
+
+using namespace FrameWork;
+
+class Tile
+{
+private:
+	int _id;
+	RECT _srcRect;
+	Sprite *_refSprite; //TileSet
+
+public:
+	~Tile();
+	const int &getId() const;
+	Tile(Sprite *refSprite, RECT srcRect, int id);
+	void draw(LPD3DXSPRITE spriteHandle, GVector2 position, Viewport *viewport = NULL);
+};
+
+#endif // !__TILE__

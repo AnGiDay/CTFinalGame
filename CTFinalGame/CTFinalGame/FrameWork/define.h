@@ -13,6 +13,7 @@
 #include <string>
 #include <map>
 #include <vector>
+
 //#include "..\debug.h"
 //#include "utils.h"
 using namespace std;
@@ -65,7 +66,9 @@ enum eID
 	SHADOW_BEAST	= 34,
 	SHADOW_ARM		= 35,
 	SHADOW_MOUTH	= 36,
-	TUT_LAYER		= 37
+	TUT_LAYER		= 37,
+
+	MAP1			=38
 };
  
 enum eStatus

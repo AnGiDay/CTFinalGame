@@ -2,6 +2,7 @@
 #ifndef __PLAY_SCENE_H__
 #define __PLAY_SCENE_H__
 
+#include "../../Map.h"
 #include "../../FrameWork/Sprite.h"
 #include "../../FrameWork/SpriteManager.h"
 #include "../../FrameWork/Scene/SceneManager.h"
@@ -62,7 +63,7 @@ private:
 	vector<BaseObject*>   _active_object;
 
 	vector<IControlable*> _listControlObject;
-	//Map* background;
+	Map* background;
 
 	// quadtree
 	//QNode* _root;

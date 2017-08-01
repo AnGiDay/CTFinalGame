@@ -34,6 +34,9 @@ bool PlayScene::init()
 	bridge->init();
 	//bridge->setStatus(eStatus::BURST);
 	_listobject.push_back(bridge);
+
+	background =  Map::LoadMapFromFile("Resource//Map//map1.txt", eID::MAP1);
+
 	/*auto _soldier = new Soldier(eStatus::RUNNING, GVector2(100, 200), 1);
 	_soldier->init();
 	_listobject.push_back(_soldier);*/
@@ -94,7 +97,8 @@ void PlayScene::update(float dt)
 	// left right không đổi dù hệ top-left hay hệ bot-left
 	screen.left = viewport_in_transform.left;
 	screen.right = viewport_in_transform.right;
-    screen.top = viewport_position.y;
+    //screen.top = viewport_position.y;
+	screen.top = this->background->getWorldSize().y - viewport_position.y;
 	screen.bottom = screen.top + _viewport->getHeight();
 	// getlistobject
 #if _DEBUG
@@ -155,7 +159,7 @@ void PlayScene::update(float dt)
 }
 void PlayScene::draw(LPD3DXSPRITE spriteHandle)
 {
-
+	background->draw(spriteHandle, _viewport);
 	for (BaseObject* object : _active_object)
 	{
 		object->draw(spriteHandle,_viewport);
@@ -170,7 +174,7 @@ void PlayScene::release()
 		object->release();
 		SAFE_DELETE(object);
 	}
-
+	background->release();
 
 }
 BaseObject* PlayScene::getObject(eID id)
@@ -194,7 +198,8 @@ void PlayScene::updateViewport(BaseObject* objTracker)
 {
 	//	// Vị trí hiện tại của viewport. 
 	GVector2 current_position = _viewport->getPositionWorld();
-	GVector2 worldsize = GVector2(208, 14);
+	//GVector2 worldsize = GVector2(208, 14);
+	GVector2 worldsize = this->background->getWorldSize();
 	// Bám theo object.
 	GVector2 new_position = GVector2(max(objTracker->getPositionX() - 260, 0), WINDOW_HEIGHT);		// 200 khoảng cách tối đa giữa object và map -> hardcode
 
