@@ -101,6 +101,16 @@ void Sprite::render(LPD3DXSPRITE spriteHandle, Viewport* viewport)
 		);
 }
 
+int Sprite::GetTotalFrames()
+{
+	return _totalFrames;
+}
+
+int Sprite::GetFramePerRow()
+{
+	return _columns;
+}
+
 void Sprite::setPosition(float x, float y, float z)
 {
 	GVector3 v(x, y, z);
