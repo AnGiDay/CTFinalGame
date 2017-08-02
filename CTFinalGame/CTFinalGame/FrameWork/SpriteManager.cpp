@@ -128,6 +128,9 @@ void SpriteManager::loadResource(LPD3DXSPRITE spriteHandle)
 	this->_listSprite[eID::BULLET] = bl;
 	this->loadSpriteInfo(eID::BULLET, "Resource//bullets_type.txt");
 
+	sp = new Sprite(spriteHandle, L"Resource//Map//stage1.png", 120, 10);
+	sp->setOrigin(VECTOR2ZERO);
+	this->_listSprite[eID::MAP1] = sp;
 	//sp = new Sprite(spriteHandle, L"Resources//Images//stage3_elements.png", 5, 5);
 	//this->_listSprite[eID::ROCKFLY] = sp;
 	//this->loadSpriteInfo(eID::ROCKFLY, "Resources//Images//rockfly_animation.txt");
@@ -190,6 +193,7 @@ void SpriteManager::loadResource(LPD3DXSPRITE spriteHandle)
 Sprite* SpriteManager::getSprite(eID id)
 {
 	Sprite *it = this->_listSprite.find(id)->second;
+	
 	return new Sprite(*it);			// get the copy version of Sprite
 }
 

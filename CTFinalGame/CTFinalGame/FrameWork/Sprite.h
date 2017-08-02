@@ -106,6 +106,9 @@ public:
 	void setColor(D3DXCOLOR color);
 	D3DXCOLOR getColor();
 
+	int GetTotalFrames();
+	int GetFramePerRow();
+
 private:
 	Texture				_texture;
 	float				_opacity;						// từ 0.0f đến 1.0f thôi
