@@ -20,7 +20,7 @@ bool PlayScene::init()
 
 	auto bill = new Bill();
 	bill->init();
-	bill->setPosition(WINDOW_WIDTH, 360);
+	bill->setPosition(WINDOW_WIDTH, 200);
 	this->_bill = bill;
 	_listControlObject.push_back(bill);
 	_listobject.push_back(bill);
@@ -35,6 +35,14 @@ bool PlayScene::init()
 	//bridge->setStatus(eStatus::BURST);
 	_listobject.push_back(bridge);
 
+	auto wallTurret = new Cannon(eStatus::NORMAL, 300, 300, 1);
+	wallTurret->init();
+	_listobject.push_back(wallTurret);
+
+	auto cannon = new Cannon(eStatus::NORMAL, 400, 200, 2);
+	cannon->init();
+	_listobject.push_back(cannon);
+
 	background =  Map::LoadMapFromFile("Resource//Map//map1.txt", eID::MAP1);
 
 	/*auto _soldier = new Soldier(eStatus::RUNNING, GVector2(100, 200), 1);
@@ -46,9 +54,9 @@ bool PlayScene::init()
 	auto fifleman1 = new Rifleman(eStatus::HIDDEN, WINDOW_WIDTH / 2 + 100, WINDOW_HEIGHT / 2);
 	fifleman1->init();
 	_listobject.push_back(fifleman1);
-	auto wallTurret = new WallTurret(eStatus::NORMAL, GVector2(250, 400));
-	wallTurret->init();
-	_listobject.push_back(wallTurret);
+	//auto wallTurret = new WallTurret(eStatus::NORMAL, GVector2(250, 400));
+	//wallTurret->init();
+	//_listobject.push_back(wallTurret);
 	return true;
 }
 void PlayScene::updateInput(float dt)

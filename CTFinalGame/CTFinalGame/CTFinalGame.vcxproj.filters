@@ -123,6 +123,18 @@
     <ClCompile Include="Rifleman.cpp">
       <Filter>Object\Enemies</Filter>
     </ClCompile>
+    <ClCompile Include="Map.cpp">
+      <Filter>Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Tile.cpp">
+      <Filter>Object</Filter>
+    </ClCompile>
+    <ClCompile Include="TileSet.cpp">
+      <Filter>Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Cannon.cpp">
+      <Filter>Object\Enemies</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DeviceManager.h">
@@ -219,6 +231,18 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Rifleman.h">
+      <Filter>Object\Enemies</Filter>
+    </ClInclude>
+    <ClInclude Include="Map.h">
+      <Filter>Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Tile.h">
+      <Filter>Object</Filter>
+    </ClInclude>
+    <ClInclude Include="TileSet.h">
+      <Filter>Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Cannon.h">
       <Filter>Object\Enemies</Filter>
     </ClInclude>
   </ItemGroup>

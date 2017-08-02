@@ -16,6 +16,7 @@
 #include "../../WallTurret.h"
 #include "../../Soldier.h"
 #include "../../Rifleman.h"
+#include "../../Cannon.h"
 
 #define BOSS_VIEWPORT_ANCHOR		6112
 

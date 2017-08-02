@@ -84,10 +84,10 @@ void SpriteManager::loadResource(LPD3DXSPRITE spriteHandle)
 	//this->_listSprite.insert(pair<eID, Sprite*>(eID::FALCON, sp));
 	//this->loadSpriteInfo(eID::FALCON, "Resources//Images//falcon_animation.txt");
 
-	//sp = new Sprite(spriteHandle, L"Resources//Images//Cannon_all.png", 15, 5);
-	////this->_listSprite.insert(pair<eID, Sprite*>(eID::REDCANON, sp));
-	//this->_listSprite[eID::REDCANNON] = sp;
-	//this->loadSpriteInfo(eID::REDCANNON, "Resources//Images//cannon_animation.txt");
+	sp = new Sprite(spriteHandle, L"Resource//Images//Cannon_all.png", 15, 5);
+	//this->_listSprite.insert(pair<eID, Sprite*>(eID::REDCANON, sp));
+	this->_listSprite[eID::REDCANNON] = sp;
+	this->loadSpriteInfo(eID::REDCANNON, "Resource//Images//cannon_animation.txt");
 
 
 	sp = new Sprite(spriteHandle, L"Resource//Images//wall_turret_all.png", 42, 9);
